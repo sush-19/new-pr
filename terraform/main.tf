@@ -8,7 +8,7 @@ resource "aws_instance" "dev_server"{
 ami = "ami-0aa7d40eeae50c9a9"
 instance_type = "t2.micro"
 key_name = "mono"
-vpc_security_group_ids = [aws_security_group.jenkins-setup.id]
+vpc_security_group_ids = [aws_security_group.demo-sg.id]
 tags = {
 Name = "my-instance"
 Environment = "dev"
